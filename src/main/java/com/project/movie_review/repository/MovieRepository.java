@@ -1,0 +1,17 @@
+package com.project.movie_review.repository;
+
+import com.project.movie_review.entity.Movie;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+
+@Repository
+public interface MovieRepository extends JpaRepository<Movie,Integer> {
+
+    public List<Movie> findByTitle(String title);
+
+    public List<Movie> findByMovieGenre(String genre);
+
+
+}
