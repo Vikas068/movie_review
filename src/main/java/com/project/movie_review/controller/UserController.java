@@ -29,14 +29,8 @@ public class UserController {
 
     @PostMapping("/AddReview")
     public ResponseEntity addReviewMovie(@RequestBody Review review) throws MovieException {
-       // reviewService.addReview(review);
-       // List<Movie> movieList=movieRepository.findByTitle(review.getMovieTitle());
                 reviewService.addReview(review);
-
-
-               //throw  new MovieException("Title is not exist.");
-
-            return new ResponseEntity(HttpStatus.CREATED);
+                return new ResponseEntity(HttpStatus.CREATED);
     }
 
 
